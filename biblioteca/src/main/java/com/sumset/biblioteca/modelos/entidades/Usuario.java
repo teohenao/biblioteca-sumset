@@ -28,28 +28,27 @@ public class Usuario implements Serializable{
 	
 	@NotEmpty(message = "identificacion no puede estar vacio")
 	@Size(min = 5,max = 10)
-	@Column(nullable = false)
+	@Column(name = "identificacion")
 	private String identificacion;
 
 	@NotEmpty(message = "nombres no puede estar vacio")
 	@Size(min = 2,max = 12)
-	@Column(nullable = false)
+	@Column(name="nombres")
 	private String nombres;
 	
 	@NotEmpty(message = "apellidos no puede estar vacio")
 	@Size(min = 2,max = 20)
-	@Column(nullable = false)
+	@Column(name="apellidos")
 	private String apellidos;
 	
 	
 	@NotEmpty(message = "fecha nacimiento no puede estar vacia")
-	@Column(nullable = false)
+	@Column(name="fechaNacimiento")
 	private Date fechaNacimiento;
 	
 	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "usuario")
 	@JsonIgnore 
 	private List<Prestamo> prestamos;
-	
 	
 	public Usuario() {
 		super();

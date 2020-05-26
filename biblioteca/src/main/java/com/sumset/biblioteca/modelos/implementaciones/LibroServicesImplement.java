@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import com.sumset.biblioteca.modelos.dao.ILibroDao;
 import com.sumset.biblioteca.modelos.entidades.Libro;
 import com.sumset.biblioteca.modelos.servicios.ILibroServices;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -25,6 +28,12 @@ public class LibroServicesImplement implements ILibroServices {
 	@Transactional(readOnly = true)
 	public Libro findById(Long id) {
 		return libroDao.findById(id).orElse(null);
+	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public List<Libro> findAllLibros() {
+		return libroDao.findAllLibros();
 	}
 
 

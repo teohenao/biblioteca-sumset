@@ -4,7 +4,5 @@ import com.sumset.biblioteca.modelos.entidades.Usuario;
 
 public interface IUsuarioServices {
 
-	public Usuario findById(Usuario id);
-
 	
 }

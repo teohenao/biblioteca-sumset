@@ -1,5 +1,7 @@
 package com.sumset.biblioteca.modelos.servicios;
 
+import java.util.List;
+
 import com.sumset.biblioteca.modelos.entidades.Libro;
 
 public interface ILibroServices {
@@ -7,5 +9,7 @@ public interface ILibroServices {
 	public Libro findById(Long id);
 
 	public Libro save(Libro libro);
+
+	public List<Libro> findAllLibros();
 
 }

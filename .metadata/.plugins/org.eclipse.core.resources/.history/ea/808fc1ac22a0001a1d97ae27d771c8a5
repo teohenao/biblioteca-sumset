@@ -84,8 +84,6 @@ public class PrestamoRESTController {
 		    }else {
 		    	edad=rangoEdad.adultoMayor;
 		    }
-		    System.out.println(rEdad);
-		    System.out.println(edad);
             if(rEdad == edad){
                prestamo.setSector(u.getSector());
                prestamo.setEstado(true);

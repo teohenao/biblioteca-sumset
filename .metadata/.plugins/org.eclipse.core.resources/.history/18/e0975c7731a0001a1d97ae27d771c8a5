@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sumset.biblioteca.modelos.entidades.Libro;
@@ -154,23 +153,5 @@ public class PrestamoRESTController {
 	public List<Prestamo> prestamos(){
 		return prestamoServicio.findAllPrestamos();
 	}
-	
-	
-	@GetMapping("/prestamos/cantidad")
-	@ResponseStatus(HttpStatus.OK) 
-	public int cantidadLibrosPrestados()
-	{
-		return prestamoServicio.cantidadLibrosPrestados();
-	}
-	
-	
-	
-	@GetMapping("/prestamos/cantidad/{sector}")
-	@ResponseStatus(HttpStatus.OK) 
-	public int cantidadLibrosPrestadosSector( @PathVariable String sector)
-	{
-		return prestamoServicio.cantidadLibrosPrestadosSector(sector);
-	}
-
 
 }

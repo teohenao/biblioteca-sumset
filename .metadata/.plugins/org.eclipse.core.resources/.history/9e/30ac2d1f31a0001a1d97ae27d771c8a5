@@ -12,9 +12,6 @@ public interface IPrestamoServices {
 	
 	public List<Prestamo> findAllPrestamos();
 	
-	public int cantidadLibrosPrestados();
-	
-	public int cantidadLibrosPrestadosSector(String sector);
-
+	public Integer cantidadLibrosPrestados();
 	
 }

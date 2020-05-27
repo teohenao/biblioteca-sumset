@@ -163,8 +163,6 @@ public class PrestamoRESTController {
 		return prestamoServicio.cantidadLibrosPrestados();
 	}
 	
-	
-	
 	@GetMapping("/prestamos/cantidad/{sector}")
 	@ResponseStatus(HttpStatus.OK) 
 	public int cantidadLibrosPrestadosSector( @PathVariable String sector)

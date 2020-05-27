@@ -33,14 +33,4 @@ public class PrestamoServicesImplement implements IPrestamoServices{
 		return prestamoDao.findAllPrestamos();
 	}
 
-	@Override
-	public int cantidadLibrosPrestados() {
-		return prestamoDao.cantidadLibrosPrestados();
-	}
-
-	@Override
-	public int cantidadLibrosPrestadosSector(String sector) {
-		return prestamoDao.cantidadLibrosPrestadosSector(sector);
-	}
-
 }

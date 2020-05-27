@@ -13,9 +13,6 @@ public interface IPrestamoDao extends JpaRepository<Prestamo,Long>{
 	public List<Prestamo> findAllPrestamos();
 	
 	@Query("select COUNT(p) from Prestamo p where p.estado=true")
-	public int cantidadLibrosPrestados();
-	
-	@Query("select COUNT(p) from Prestamo p where p.estado=true and p.sector=?1")
-	public int cantidadLibrosPrestadosSector(String sector);
+	public Integer cantidadLibrosPrestados();
 	
 }

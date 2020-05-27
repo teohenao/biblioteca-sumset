@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,7 +53,7 @@ public class LibroRESTController {
 			return new ResponseEntity<Map<String, Object>>(response,HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		response.put("mensaje", "publicacion creado con exito");
-		response.put("recomendacion", nuevoLibro);
+		response.put("usuario", nuevoLibro);
 		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.CREATED);
 	}
 	
@@ -62,5 +61,7 @@ public class LibroRESTController {
 	public List<Libro> libros(){
 		return libroServicio.findAllLibros();
 	}
+	
+	
 
 }

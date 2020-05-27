@@ -41,10 +41,6 @@ public class Usuario implements Serializable{
 	@Column(name="apellidos")
 	private String apellidos;
 	
-	@NotEmpty(message = "clave no puede estar vacia")
-	@Column(name="clave")
-	private String clave;
-	
 	
 	@NotEmpty(message = "fecha nacimiento no puede estar vacia")
 	@Column(name="fechaNacimiento")
@@ -108,15 +104,6 @@ public class Usuario implements Serializable{
 	}
 
 	
-	public String getClave() {
-		return clave;
-	}
-
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
-
-
 	private static final long serialVersionUID = 1L;
 
 }

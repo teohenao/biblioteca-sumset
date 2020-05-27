@@ -50,7 +50,7 @@ public class Usuario implements Serializable{
 	@Column(name="fechaNacimiento")
 	private Date fechaNacimiento;
 	
-	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "usuario")
+	@OneToMany(fetch = FetchType.LAZY,mappedBy = "usuario")
 	@JsonIgnore 
 	private List<Prestamo> prestamos;
 	

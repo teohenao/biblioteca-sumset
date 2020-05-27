@@ -1,5 +1,28 @@
 package com.sumset.biblioteca.modelos.implementaciones;
 
-public class PrestamoServicesImplement {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.sumset.biblioteca.modelos.dao.IPrestamoDao;
+import com.sumset.biblioteca.modelos.entidades.Prestamo;
+import com.sumset.biblioteca.modelos.servicios.IPrestamoServices;
+
+@Service
+public class PrestamoServicesImplement implements IPrestamoServices{
+
+	
+	@Autowired
+	private IPrestamoDao prestamoDao;
+	
+	@Override
+	public Prestamo findById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Prestamo save(Prestamo prestamo) {
+		return prestamoDao.save(prestamo);
+	}
+	
 
 }

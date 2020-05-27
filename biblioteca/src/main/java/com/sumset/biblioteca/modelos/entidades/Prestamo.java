@@ -29,7 +29,7 @@ public class Prestamo implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@Column(name="fecha_prestamo")
+	@Column(name="fechaPrestamo")
 	@Temporal(TemporalType.DATE)
 	private Date fechaPrestamo;
 	
@@ -40,8 +40,7 @@ public class Prestamo implements Serializable{
 	@JsonIgnoreProperties(value={"prestamos","hibernateLazyInitializer","handler"},allowSetters = true)
 	private Usuario usuario;
 	
-	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "prestamo")
-	@JsonIgnore 
+	@OneToMany(fetch = FetchType.LAZY,mappedBy = "prestamo")
 	private List<Libro> libros;
 	
 	@PrePersist

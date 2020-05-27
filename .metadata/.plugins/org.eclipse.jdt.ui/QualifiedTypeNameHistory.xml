@@ -11,4 +11,5 @@
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="com.sumset.biblioteca.modelos.servicios.ILibroServices"/>
 </qualifiedTypeNameHistroy>

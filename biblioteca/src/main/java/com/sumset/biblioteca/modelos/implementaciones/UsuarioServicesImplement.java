@@ -26,4 +26,10 @@ public class UsuarioServicesImplement implements IUsuarioServices {
 		return usuarioDao.findByClaveAndIdentificacion(identificacion, clave);
 	}
 	
+
+	@Override
+	@Transactional(readOnly = true)
+	public Usuario findById(Long id) {
+		return usuarioDao.findById(id).orElse(null);
+	}
 }

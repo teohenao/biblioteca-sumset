@@ -85,14 +85,13 @@ public class PrestamoRESTController {
 		    	edad=rangoEdad.adultoMayor;
 		    }
 
-            if(rEdad == edad){
-               prestamo.setSector(u.getSector());
+            if(rEdad == edad) {
                prestamo.setEstado(true);
     		   nuevoPrestamo = prestamoServicio.save(prestamo);
     		   libro.setPrestamo(nuevoPrestamo);
     		   libro.setDisponibilidad(false);
     		   libro = libroServicio.save(libro);
-		    }else { 
+		    }else {
 		    	response.put("mensaje", "No tiene la edad adecuada para solicitar este libro");
 				return new ResponseEntity<Map<String, Object>>(response,HttpStatus.BAD_REQUEST);
 		    }
@@ -130,7 +129,7 @@ public class PrestamoRESTController {
 			return new ResponseEntity<Map<String, Object>>(response,HttpStatus.NOT_FOUND);
 		}
 		try {
-			prestamoActual.setEstado(false);
+			prestamo.setEstado(false);
 			prestamo.getLibros().get(0).setDisponibilidad(true);
 			libroServicio.save(prestamo.getLibros().get(0));
 			prestamoActualizado = prestamoServicio.save(prestamoActual);

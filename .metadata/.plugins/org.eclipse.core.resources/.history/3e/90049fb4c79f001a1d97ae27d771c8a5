@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -17,6 +18,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -33,9 +35,6 @@ public class Prestamo implements Serializable{
 	
 	@Column(name = "sector")
 	private String sector;
-	
-	@Column(name = "estado")
-	private Boolean estado;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonIgnoreProperties(value={"prestamos","hibernateLazyInitializer","handler"},allowSetters = true)
@@ -88,16 +87,6 @@ public class Prestamo implements Serializable{
 
 	public void setLibros(List<Libro> libros) {
 		this.libros = libros;
-	}
-
-
-	public Boolean getEstado() {
-		return estado;
-	}
-
-
-	public void setEstado(Boolean estado) {
-		this.estado = estado;
 	}
 
 

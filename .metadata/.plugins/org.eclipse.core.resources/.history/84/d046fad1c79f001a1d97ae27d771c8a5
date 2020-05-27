@@ -91,16 +91,6 @@ public class Prestamo implements Serializable{
 	}
 
 
-	public Boolean getEstado() {
-		return estado;
-	}
-
-
-	public void setEstado(Boolean estado) {
-		this.estado = estado;
-	}
-
-
 	public String getSector() {
 		return sector;
 	}

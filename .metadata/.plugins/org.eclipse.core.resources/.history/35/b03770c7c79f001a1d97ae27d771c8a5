@@ -34,9 +34,6 @@ public class Prestamo implements Serializable{
 	@Column(name = "sector")
 	private String sector;
 	
-	@Column(name = "estado")
-	private Boolean estado;
-	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonIgnoreProperties(value={"prestamos","hibernateLazyInitializer","handler"},allowSetters = true)
 	private Usuario usuario;
@@ -88,16 +85,6 @@ public class Prestamo implements Serializable{
 
 	public void setLibros(List<Libro> libros) {
 		this.libros = libros;
-	}
-
-
-	public Boolean getEstado() {
-		return estado;
-	}
-
-
-	public void setEstado(Boolean estado) {
-		this.estado = estado;
 	}
 
 

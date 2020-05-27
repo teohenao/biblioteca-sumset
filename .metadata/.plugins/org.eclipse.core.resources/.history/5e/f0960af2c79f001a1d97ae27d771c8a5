@@ -80,7 +80,6 @@ public class PrestamoRESTController {
 		    }
 
             if(rEdad == edad) {
-               prestamo.setEstado(true);
     		   nuevoPrestamo = prestamoServicio.save(prestamo);
     		   libro.setPrestamo(nuevoPrestamo);
     		   libro.setDisponibilidad(false);

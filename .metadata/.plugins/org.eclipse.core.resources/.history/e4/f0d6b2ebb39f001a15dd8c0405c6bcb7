@@ -75,7 +75,7 @@ public class UsuarioRESTController {
 		}
 		if(usuario == null)
 		{
-			response.put("mensaje", "El usuario con la identificacion : ".concat(identificacion).concat(" No existe"));
+			response.put("mensaje", "El usuario Id:".concat(identificacion).concat(" No existe"));
 			return new ResponseEntity<Map<String, Object>>(response,HttpStatus.NOT_FOUND);
 		}
 		return new ResponseEntity<Usuario>(usuario,HttpStatus.OK); 

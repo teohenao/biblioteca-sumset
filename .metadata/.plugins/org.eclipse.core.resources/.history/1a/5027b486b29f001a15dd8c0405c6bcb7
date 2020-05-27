@@ -6,6 +6,4 @@ public interface IUsuarioServices {
 
 	public Usuario save(Usuario usuario);
 	
-	public Usuario findByClaveAndIdentificacion(String identificacion,String clave);
-	
 }

@@ -19,11 +19,4 @@ public class UsuarioServicesImplement implements IUsuarioServices {
 	public Usuario save(Usuario usuario) {
 		return usuarioDao.save(usuario);
 	}
-
-	@Override
-	@Transactional(readOnly = true)
-	public Usuario findByClaveAndIdentificacion(String identificacion, String clave) {
-		return usuarioDao.findByClaveAndIdentificacion(identificacion, clave);
-	}
-	
 }

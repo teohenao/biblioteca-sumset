@@ -1,7 +1,7 @@
 package com.sumset.biblioteca.modelos.entidades;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -47,7 +47,7 @@ public class Usuario implements Serializable{
 	
 	
 	@NotEmpty(message = "fecha nacimiento no puede estar vacia")
-	@Column(name = "fechaNacimiento")
+	@Column(name="fechaNacimiento")
 	private Date fechaNacimiento;
 	
 	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "usuario")

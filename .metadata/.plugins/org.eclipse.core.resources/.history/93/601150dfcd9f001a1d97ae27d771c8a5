@@ -108,7 +108,7 @@ public class PrestamoRESTController {
 	}
 	
 	@PutMapping("/prestamos/{id}")
-	public ResponseEntity<?> devolverPrestamo(@Valid @RequestBody Prestamo prestamo,BindingResult result, @PathVariable Long id)
+	public ResponseEntity<?> update(@Valid @RequestBody Prestamo prestamo,BindingResult result, @PathVariable Long id)
 	{
 		Prestamo prestamoActual = prestamoServicio.findById(id);
 		Prestamo prestamoActualizado = null;		
@@ -141,7 +141,7 @@ public class PrestamoRESTController {
 		
 	
 		response.put("mensaje", "prestamo actualizado con exito");
-		response.put("prestamo", prestamoActualizado);
+		response.put("cliente", prestamoActualizado);
 		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.CREATED) ;
 	}
 	

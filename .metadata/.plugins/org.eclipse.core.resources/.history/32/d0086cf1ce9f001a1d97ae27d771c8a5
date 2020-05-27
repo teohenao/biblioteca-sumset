@@ -141,7 +141,7 @@ public class PrestamoRESTController {
 		
 	
 		response.put("mensaje", "prestamo actualizado con exito");
-		response.put("prestamo", prestamoActualizado);
+		response.put("cliente", prestamoActualizado);
 		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.CREATED) ;
 	}
 	
